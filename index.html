@@ -217,6 +217,98 @@
 
 
   
+    <article id="post-hexosetup" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/09/hexosetup/">Hexo的安装方法</a>
+    </h1>
+  
+
+        
+        <a href="/2017/09/09/hexosetup/" class="archive-article-date">
+  	<time datetime="2017-09-09T12:03:39.549Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>Hexo使用cmd命令形式安装，首先在电脑中新建一个文件夹，例如在C盘下新建一个Blog文件夹</p>
+<p>打开cmd.exe 输入cd c:\blog</p>
+<p>然后输入npm i -g hexo 进行安装</p>
+<p>安装完成后可以输入hexo -v 查看版本</p>
+<p>输入hexo init 进行初始化</p>
+<p>初始化完成后就可以在Blog文件夹下看到：</p>
+<ul>
+<li>● node_modules：是依赖包</li>
+<li>● public：存放的是生成的页面</li>
+<li>● scaffolds：命令生成文章等的模板</li>
+<li>● source：用命令创建的各种文章</li>
+<li>● themes：主题</li>
+<li>● _config.yml：整个博客的配置</li>
+<li>● db.json：source解析所得到的</li>
+<li>● package.json：项目所需模块项目的配置信息<br>生成静态页面<br>hexo generate（hexo g也可以）<br>本地启动<br>启动本地服务，进行文章预览调试，命令：<br>hexo server</li>
+</ul>
+<p>然后在网页中输入:<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> 能看到Hexo主页</p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/09/09/hexosetup/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
   
 
 
@@ -308,6 +400,10 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
