@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/09/10/issue/index.html">
 <meta property="og:site_name" content="Born Blog">
 <meta property="og:description" content="相关信息 首先提供一下我的博客的相关信息参考一下：搭建环境：Hexo+github使用主题：Yilia主题下载地址：yilia主题下载 下载命令：$ git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia">
-<meta property="og:updated_time" content="2017-09-10T06:11:31.755Z">
+<meta property="og:updated_time" content="2017-09-10T06:17:27.584Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo添加评论或留言板">
 <meta name="twitter:description" content="相关信息 首先提供一下我的博客的相关信息参考一下：搭建环境：Hexo+github使用主题：Yilia主题下载地址：yilia主题下载 下载命令：$ git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia">
@@ -172,7 +172,9 @@
       
         <h4 id="相关信息"><a href="#相关信息" class="headerlink" title="相关信息"></a>相关信息</h4><blockquote>
 <p>首先提供一下我的博客的相关信息参考一下：<br>搭建环境：Hexo+github<br>使用主题：Yilia<br>主题下载地址<a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="external">：yilia主题下载 </a><br>下载命令：$ git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="external">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia<br><a id="more"></a></p>
-<h4 id="配置步骤"><a href="#配置步骤" class="headerlink" title="配置步骤"></a>配置步骤</h4><p>废话不多说，下面进入正题。<br>评论和留言板实现的方法其实是一致的，使用Yilia主题的朋友应该会发现，主题下的_config.yml文件中有加上评论的配置，有像多说，网易云跟帖，畅言，github等。由于我搭建博客的时候，听说多说，网易云等已经不支持服务了，所以最后我决定使用github，这个貌似应该就不会停止服务了吧。<br>操作方法：<br>在上面提到的_config.yml文件中，配置github评论的是:  </p>
+</blockquote>
+<h4 id="配置步骤"><a href="#配置步骤" class="headerlink" title="配置步骤"></a>配置步骤</h4><blockquote>
+<p>废话不多说，下面进入正题。<br>评论和留言板实现的方法其实是一致的，使用Yilia主题的朋友应该会发现，主题下的_config.yml文件中有加上评论的配置，有像多说，网易云跟帖，畅言，github等。由于我搭建博客的时候，听说多说，网易云等已经不支持服务了，所以最后我决定使用github，这个貌似应该就不会停止服务了吧。<br>操作方法：<br>在上面提到的_config.yml文件中，配置github评论的是:  </p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">#5、Gitment</div><div class="line">gitment_owner: false      #你的 GitHub ID </div><div class="line">gitment_repo: &apos;&apos;          #存储评论的 repo</div><div class="line">gitment_oauth:</div><div class="line">  client_id: &apos;&apos;           #client ID</div><div class="line">  client_secret: &apos;&apos;       #client secret</div></pre></td></tr></table></figure>
 <blockquote>
@@ -184,7 +186,9 @@
 <li>在浏览器打开博客界面，便看到评论区，按照提示操作Login with GitHub 然后 Init，你的评论区便可以投入使用了。</li>
 </ol>
 <p>注意，如果操作完成，打开界面有提示错误，请检查 Homepage URL和Authorization callback URL，或者gitment_owner、gitment_repo是否填写错误，本地测试会出现Comments Not Initialized 错误提示，这个时候hexo d，然后再在网页操作即可。</p>
-<h4 id="其他方法"><a href="#其他方法" class="headerlink" title="其他方法"></a>其他方法</h4><p>yilia主题的这个配置方法，一旦配置，所有的文章下面都有评论栏。网络上也有其他的教程，是在具体的页面下加上:  </p>
+</blockquote>
+<h4 id="其他方法"><a href="#其他方法" class="headerlink" title="其他方法"></a>其他方法</h4><blockquote>
+<p>yilia主题的这个配置方法，一旦配置，所有的文章下面都有评论栏。网络上也有其他的教程，是在具体的页面下加上:  </p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;container&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://imsun.github.io/gitment/style/default.css&quot;&gt;</div><div class="line">&lt;script src=&quot;https://imsun.github.io/gitment/dist/gitment.browser.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script&gt;</div><div class="line">var gitment = new Gitment(&#123;</div><div class="line">  owner: &apos;xxx&apos;,  //改你自己的名字</div><div class="line">  repo: &apos;xxx&apos;,  //专门储存评论一个GitHub仓库</div><div class="line">  oauth: &#123;</div><div class="line">    client_id: &apos;xxxx&apos;, //改为你自己的，下同</div><div class="line">    client_secret: &apos;xxxx&apos;, </div><div class="line">  &#125;,</div><div class="line">&#125;)</div><div class="line">gitment.render(&apos;container&apos;)</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
 <blockquote>
